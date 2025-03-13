@@ -1,21 +1,23 @@
 {
   "expo": {
-    "name": "demo-login",
-    "slug": "demo-login",
+    "name": "login-demo",
+    "slug": "login-demo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "scheme": "demologin",
+    "scheme": "br.maua.logindemo",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "br.maua.logindemo"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "br.maua.logindemo"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -30,6 +32,15 @@
         }
       ],
       "react-native-edge-to-edge"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "ff269b77-6617-40ce-bbea-2b9a1de46316"
+      }
+    },
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/ff269b77-6617-40ce-bbea-2b9a1de46316"
+    }
   }
 }

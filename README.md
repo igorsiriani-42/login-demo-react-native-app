@@ -1,65 +1,66 @@
-# Starter Template with React Navigation
+# Login Demo
 
-This is a minimal starter template for React Native apps using Expo and React Navigation.
+Este é um template de aplicativo feito em React Native com Expo, demonstrando como implementar a autenticação com conta Microsoft (Azure AD). O objetivo deste projeto é servir de base para que futuros aplicativos integrem o login Microsoft de forma simples e escalável.
 
-It includes the following:
+## Recursos
 
-- Example [Native Stack](https://reactnavigation.org/docs/native-stack-navigator) with a nested [Bottom Tab](https://reactnavigation.org/docs/bottom-tab-navigator)
-- Web support with [React Native for Web](https://necolas.github.io/react-native-web/)
-- TypeScript support and configured for React Navigation
-- Automatic deep link and URL handling configuration
-- Expo [Development Build](https://docs.expo.dev/develop/development-builds/introduction/) with [Continuous Native Generation](https://docs.expo.dev/workflow/continuous-native-generation/)
-- Edge-to-edge configured on Android with [`react-native-edge-to-edge`](https://www.npmjs.com/package/react-native-edge-to-edge)
+- **Autenticação com Microsoft:** Implementação de login utilizando Azure AD.
+- **Decodificação de Token JWT:** Extração de informações do usuário a partir do token.
+- **Navegação:** Uso do React Navigation para transição entre telas (ex.: Login e Perfil).
+- **Template Escalável:** Estrutura modular para servir como base para novos projetos.
 
-## Getting Started
+## Pré-requisitos
 
-1. Create a new project using this template:
+- [Node.js](https://nodejs.org/) (recomendado a versão LTS)
+- [npm](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/)
+- [Expo CLI](https://docs.expo.dev/workflow/expo-cli/) instalado globalmente
 
-   ```sh
-   npx create-expo-app@latest --template react-navigation/template
-   ```
+## Instalação
 
-2. Edit the `app.json` file to configure the `name`, `slug`, `scheme` and bundle identifiers (`ios.bundleIdentifier` and `android.bundleIdentifier`) for your app.
+1. **Clone o repositório:**
 
-3. Edit the `src/App.tsx` file to start working on your app.
+   ```bash
+   git clone https://github.com/igorsiriani-42/login-demo-react-native-app.git
+   cd login-demo-react-native-app
+	```
+2. **Instale as dependências:**
+	```bash	
+    npm install	
+    ```
+    ou, se preferir usar o Yarn:
+	```bash	
+    yarn install 
+    ```
+3. **Configure as Variáveis de Ambiente:**	Crie um arquivo .env na raiz do projeto e adicione as seguintes variáveis:
+	```bash	
+	EXPO_PUBLIC_AZURE_TENANT_ID=seu-tenant-id
+	EXPO_PUBLIC_AZURE_CLIENT_ID=seu-client-id
+	```
+	Substitua seu-tenant-id e seu-client-id pelos valores fornecidos pelo Azure.
 
-## Running the app
+## Executando o Aplicativo
 
-- Install the dependencies:
+Para iniciar o aplicativo, execute:
+```bash
+expo start
+```
+Isso abrirá o Expo Developer Tools, permitindo que você execute o app em um emulador ou em um dispositivo físico utilizando o Expo Go.
 
-  ```sh
-  npm install
-  ```
+## Estrutura do Projeto
 
-- Start the development server:
+* assets/
+Contém imagens e outros recursos estáticos utilizados no aplicativo.
+* src/
+	* screens/
+		* Login.tsx: Tela que implementa o fluxo de autenticação com a conta Microsoft.
+		* Profile.tsx: Tela que exibe as informações do usuário após a autenticação.
+		* ...
+	* services/	Funções e serviços auxiliares, como funções de delay ou outras utilidades.
+* README.md: Este arquivo com informações sobre o projeto.
 
-  ```sh
-  npm start
-  ```
+## Considerações Finais
 
-- Build and run iOS and Android development builds:
+Este template demonstra uma abordagem prática e escalável para implementar o login com Microsoft em aplicativos React Native utilizando Expo. Sinta-se à vontade para personalizar, expandir e integrar novas funcionalidades conforme as necessidades do seu projeto.
 
-  ```sh
-  npm run ios
-  # or
-  npm run android
-  ```
-
-- In the terminal running the development server, press `i` to open the iOS simulator, `a` to open the Android device or emulator, or `w` to open the web browser.
-
-## Notes
-
-This project uses a [development build](https://docs.expo.dev/develop/development-builds/introduction/) and cannot be run with [Expo Go](https://expo.dev/go). To run the app with Expo Go, edit the `package.json` file, remove the `expo-dev-client` package and `--dev-client` flag from the `start` script. However, Edge-to-edge won't work on Expo Go.
-
-We highly recommend using the development builds for normal development and testing.
-
-The `ios` and `android` folder are gitignored in the project by default as they are automatically generated during the build process ([Continuous Native Generation](https://docs.expo.dev/workflow/continuous-native-generation/)). This means that you should not edit these folders directly and use [config plugins](https://docs.expo.dev/config-plugins/) instead. However, if you need to edit these folders, you can remove them from the `.gitignore` file so that they are tracked by git.
-
-## Resources
-
-- [React Navigation documentation](https://reactnavigation.org/)
-- [Expo documentation](https://docs.expo.dev/)
-
----
-
-Demo assets are from [lucide.dev](https://lucide.dev/)
+## Licença
+Este projeto está licenciado sob a [GNU General Public License v3.0](https://github.com/igorsiriani-42/login-demo-react-native-app/blob/main/LICENSE).
