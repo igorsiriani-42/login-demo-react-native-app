@@ -36,7 +36,7 @@ Este é um template de aplicativo feito em React Native com Expo, demonstrando c
 	EXPO_PUBLIC_AZURE_TENANT_ID=seu-tenant-id
 	EXPO_PUBLIC_AZURE_CLIENT_ID=seu-client-id
 	```
-	Substitua seu-tenant-id e seu-client-id pelos valores fornecidos pelo Azure.
+	Substitua seu-tenant-id e seu-client-id pelos valores fornecidos pela equipe do GTI-Mauá.
 
 ## Executando o Aplicativo
 
